@@ -1,0 +1,60 @@
+<header class="app-header navbar">
+    <div class="col-md-2 col-sm-2">
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">&#9776;</button>
+        <a class="navbar-brand" style = "float:left" href="#"></a>
+        <ul class="nav navbar-nav hidden-md-down">
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler sidebar-toggler"  href="#" style = "margin-top:36px">&#9776;</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10 col-sm-10" style="text-align:right; margin-top:20px;">
+        <input type="text"  placeholder="text" id="text">
+        <input type="text"  placeholder="*********" id="number">
+        <button type="button">Login
+        </button>
+    </div>
+</header>
+
+<div class="app-body">
+    <div class="sidebar" style = "padding-top:56px;">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/register']"><i class="icon-pie-chart"></i> Register Patient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/health']"><i class="icon-pie-chart"></i> Health Screenings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/tb-screening']"><i class="icon-pie-chart"></i>TB Screening</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/login-out']"><i class="icon-pie-chart"></i> Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <main class="main" style = "width:77%">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <breadcrumbs></breadcrumbs>
+        </ol>
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+</div>
+
+<footer class="app-footer">
+    <!--<a href="http://coreui.io">CoreUI</a> &copy; 2017 creativeLabs.
+    <span class="float-right">Powered by <a href="http://coreui.io">CoreUI</a>
+    </span>-->
+    <img class="img-responsive" src="../img/Picture1.png" alt="">
+</footer>
